@@ -13,13 +13,34 @@ public class Numero {
 		}
 		return lista;
 	}
-	
+
+
+
+	private static boolean armstrong(int num) {
+		String numCadena= Integer.toString(num);
+		int numDigitos=numCadena.length();
+		double suma=0;
+		for(int i=0; i<numDigitos;i++) {
+			int cifra=Character.getNumericValue(numCadena.charAt(i));
+			double potencia=Math.pow(cifra, numDigitos);
+			suma+=potencia;
+		}
+		if(suma==num) {
+			return true;
+		}else {
+		return false;	
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<Integer> prueba=seriePell();
+		int num=153;
+		System.out.println(armstrong(num));
+
+  ArrayList<Integer> prueba=seriePell();
 		for (int i=0; i<prueba.size();i++) {
 			System.out.println(prueba.get(i));
 		}
-	}
 
 }
+
+]
