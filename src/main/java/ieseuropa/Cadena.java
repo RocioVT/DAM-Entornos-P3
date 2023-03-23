@@ -7,4 +7,10 @@ public class Cadena {
 		return textoModificado.length();
 	}
 	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String texto = "Mari Carmen";
+		System.out.println(calcularLongitud(texto));
+	}
 }
