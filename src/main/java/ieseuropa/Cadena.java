@@ -10,4 +10,11 @@ public class Cadena {
 		return texto.toLowerCase();
 	}
 	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	String texto = "MariCarmen";
+	System.out.println(cambiarMayusc(texto));
+	System.out.println(cambiarMinusc(texto));
+	}
 }
