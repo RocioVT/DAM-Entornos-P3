@@ -53,6 +53,16 @@ public class Numero {
 		return factorial;
 	}
 
+	private static String calcularHora(int num) {
+		int horas = num / 3600;
+		int segundos = num % 3600;
+		int minutos = segundos / 60;
+		segundos = segundos % 60;
+		String hora = String.valueOf(horas + "hs ").concat(String.valueOf(minutos + "mins "))
+				.concat(segundos + "segs ");
+		return hora;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int num = 153;
@@ -64,6 +74,8 @@ public class Numero {
 		}
 		System.out.println(esPrimo(7));
 		System.out.println(calcularFactorial(5));
+		System.out.println(calcularHora(24543));
 	}
 
 }
+
