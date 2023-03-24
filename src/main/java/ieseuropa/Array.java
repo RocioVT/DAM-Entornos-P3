@@ -1,5 +1,7 @@
 package main.java.ieseuropa;
 
+import java.util.Arrays;
+
 public class Array {
 
 	
@@ -21,6 +23,18 @@ public class Array {
 		}
 		return sumatorio/array.length;
 	}
+	
+	private static int medianaArray(int[] array) {
+		Arrays.sort(array);
+		int numeroCentral = array.length/2;
+		if(array.length % 2 != 0) {
+			return array[numeroCentral];
+		}else {
+			return (array[numeroCentral-1]+array[numeroCentral])/2;
+		}
+	}
+	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -31,8 +45,11 @@ public class Array {
 		System.out.println("Hola");
 		
 		//Media
-		int[] array = {8,2,3,4,4};
-		System.out.println(mediaArray(array));
+		int[] array = {8,2,3,4,10};
+
+		System.out.println("Media: "+mediaArray(array));
+		//Mediana
+		System.out.println("Mediana: "+medianaArray(array));
 
 	}
 
