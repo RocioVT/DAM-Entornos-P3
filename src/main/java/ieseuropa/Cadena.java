@@ -22,12 +22,17 @@ public class Cadena {
 		
 		return repetido;
 	}
+	private static String borrarCadena(String cadena, String borrado) {
+		String cadenaFin=cadena.replace(borrado, "");
+		return cadenaFin;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		
 		System.out.println(repetirStrings("Hola", "Hamijo",3));
 		System.out.println(repetirLetras("Rock&Stone4ever"));
+		System.out.println(borrarCadena("si si si, creanme que es asi","si"));
 	}
 
 }
