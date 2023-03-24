@@ -13,9 +13,19 @@ public class Numero {
 		}
 		return lista;
 	}
-
-
-
+	private static boolean isLucky (int n) {
+		int contador=2;
+		do {
+		if(contador > n)  
+			return true;  
+		if(n%contador == 0)  
+			return false;     
+			n = n-(n/contador);  
+			contador++;
+		}while(contador>0);
+	return true;	
+	}
+	
 	private static boolean armstrong(int num) {
 		String numCadena= Integer.toString(num);
 		int numDigitos=numCadena.length();
@@ -36,11 +46,14 @@ public class Numero {
 		int num=153;
 		System.out.println(armstrong(num));
 
-  ArrayList<Integer> prueba=seriePell();
+		ArrayList<Integer> prueba=seriePell();
 		for (int i=0; i<prueba.size();i++) {
 			System.out.println(prueba.get(i));
 		}
-
+		
+		int suerteSi=7;
+		int suerteNo=8;
+		System.out.println(isLucky(suerteSi)+" "+isLucky(suerteNo));
 }
 
 }
